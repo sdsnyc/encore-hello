@@ -1,5 +1,5 @@
 const TOKEN = process.argv.slice(2)[0];
-const ENVIRONMENT_ID = '4bc44947-051a-4f3a-8e87-76c5f20dd6a5';
+const ENVIRONMENT_ID = '95ac4393-db7a-4bcf-800f-89de14d70e6e';
 const SERVICE_ID = '52e26c3c-aac6-49c6-9b89-97f68554385d';
 
 const resp = await fetch('https://backboard.railway.com/graphql/v2', {
