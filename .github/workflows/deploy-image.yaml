@@ -39,3 +39,11 @@ jobs:
 
       - name: Push Docker image
         run: docker push ghcr.io/${{ github.repository }}:latest
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Trigger Railway deployment
+        run: node script.js ${{ secrets.RAILWAY_API_TOKEN }}
