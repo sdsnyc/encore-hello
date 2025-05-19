@@ -7,7 +7,7 @@
         "disable_ca_validation": true
       },
       "databases": {
-        "mydb": {
+        "railway": {
           "name": "railway",
           "username": "postgres",
           "password": { "$env": "DB_PASSWORD" }
