@@ -1,0 +1,18 @@
+{
+  "$schema": "https://encore.dev/schemas/infra.schema.json",
+  "sql_servers": [
+    {
+      "host": "autorack.proxy.rlwy.net:18181",
+      "tls_config": {
+        "disable_ca_validation": true
+      },
+      "databases": {
+        "mydb": {
+          "name": "railway",
+          "username": "postgres",
+          "password": { "$env": "DB_PASSWORD" }
+        }
+      }
+    }
+  ]
+}
