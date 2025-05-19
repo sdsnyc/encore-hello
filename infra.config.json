@@ -10,7 +10,10 @@
         "railway": {
           "name": "railway",
           "username": "postgres",
-          "password": { "$env": "DB_PASSWORD" }
+          "password": { "$env": "DB_PASSWORD" },
+          "client_cert": {},
+          "min_connections": 1,
+          "max_connections": 10
         }
       }
     }
