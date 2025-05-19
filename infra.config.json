@@ -7,13 +7,12 @@
         "disable_ca_validation": true
       },
       "databases": {
-        "railway": {
+        "mydb": {
           "name": "railway",
           "username": "postgres",
           "password": { "$env": "DB_PASSWORD" },
-          "client_cert": {},
-          "min_connections": 1,
-          "max_connections": 10
+          "max_connections": 10,
+          "min_connections": 1
         }
       }
     }

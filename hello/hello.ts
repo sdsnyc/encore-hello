@@ -21,7 +21,7 @@ export const get = api(
   },
 );
 
-const mydb = new SQLDatabase('railway', {
+const mydb = new SQLDatabase('mydb', {
   migrations: './migrations',
 });
 
