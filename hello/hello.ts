@@ -1,4 +1,5 @@
-import { api } from "encore.dev/api";
+import { api } from 'encore.dev/api';
+import { SQLDatabase } from 'encore.dev/storage/sqldb';
 
 // Welcome to Encore!
 // This is a simple "Hello World" project to get you started.
@@ -13,13 +14,26 @@ import { api } from "encore.dev/api";
 //	curl http://localhost:4000/hello/World
 //
 export const get = api(
-  { expose: true, method: "GET", path: "/hello/:name" },
+  { expose: true, method: 'GET', path: '/hello/:name' },
   async ({ name }: { name: string }): Promise<Response> => {
     const msg = `Hello ${name}!`;
     return { message: msg };
-  }
+  },
 );
 
+const mydb = new SQLDatabase('mydb', {
+  migrations: './migrations',
+});
+
+export const getUser = api(
+  { expose: true, method: 'GET', path: '/names/:id' },
+  async ({ id }: { id: number }): Promise<{ id: number; name: string }> => {
+    return (await mydb.queryRow`SELECT * FROM users WHERE id = ${id}`) as {
+      id: number;
+      name: string;
+    };
+  },
+);
 interface Response {
   message: string;
 }
