@@ -9,14 +9,14 @@
     "test": "vitest"
   },
   "devDependencies": {
-    "@types/node": "^24.10.1",
+    "@types/node": "^25.0.1",
     "typescript": "^5.9.3",
-    "vitest": "^4.0.14"
+    "vitest": "^4.0.15"
   },
   "dependencies": {
-    "encore.dev": "^1.52.1"
+    "encore.dev": "^1.53.0"
   },
   "optionalDependencies": {
-    "@rollup/rollup-linux-x64-gnu": "^4.13.0"
+    "@rollup/rollup-linux-x64-gnu": "^4.53.3"
   }
 }
